@@ -17,4 +17,7 @@ jobs:
       uses: render/deploy-action@v1
       with:
         service-id: ${{ secrets.RENDER_SERVICE_ID }}
-        api-key: ${{ secrets.RENDER_API_KEY }} 
+        api-key: ${{ secrets.RENDER_API_KEY }}
+        env-vars: |
+          MESSAGE=Hello from my custom web service!
+          PATH=/custom-path 
